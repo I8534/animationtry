@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.animated-container {
+  position: relative;
+  width: 70%;
+  margin: 30px auto;
+  background-color: dodgerblue;
+}
+
+.animated-container img {
+  width: 50%;
+}
+
+.elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation-name: move;
+  animation-duration: 1.5s;
+  animation-direction: alternate-reverse;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* 0%는 애니메이션의 시작을 의미, 100%는애니메이션의 종료를 의미한다. */
+@keyframes move {
+  0% {
+    transform: translate(-15px, 0px);
+  }
+  100% {
+    transform: translate(0px, -15px);
+  }
+  /* 100% {
+    transform: translate(-15px, 0px);
+  } */
+}
